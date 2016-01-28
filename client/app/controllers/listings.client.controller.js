@@ -101,5 +101,14 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
       }, 
       zoom: 14
     }
+    // $scope.listingMarkers = [];
+    // $scope.createMarkers = function(){
+    //   var markers = [];
+    //   for(var i = 0; i < $scope.listings; i++){
+    //     markers.push($scope.listing.latitude, $scope.listing.longitude);
+    //   }
+    //   $scope.listingMarkers = markers;
+    // };
+
   }
 ]);

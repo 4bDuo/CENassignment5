@@ -8,4 +8,9 @@
     https://angular-ui.github.io/angular-google-maps/#!/api/markers
     https://angular-ui.github.io/angular-google-maps/#!/api/windows
   -->
-  <h3>Just some text to see if the url to navigate here works... MAP VIEW</h3>
+  
+<div id="map_canvas" ng-controller="ListingsController">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options"></ui-gmap-google-map>
+    <!-- <ui-gmap-markers models="listingMarkers" coords="'self'" icon="'icon'">
+        </ui-gmap-markers> -->
+</div>
