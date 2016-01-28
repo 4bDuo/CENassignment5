@@ -18,14 +18,14 @@
           <div class="form-group" show-errors>
             <label for="name">Name</label>
             <input name="name" type="text" ng-model="name" id="name" class="form-control" placeholder="Name" required>
-            <div ng-messages="listingFrom.name.$error" role="alert">
+            <div ng-messages="listingForm.name.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Listing name is required</p>
             </div>
           </div>
           <div class="form-group" show-errors>
             <label for="code">Code</label>
             <input name="code" type="text" ng-model="code" id="code" class="form-control" placeholder="Code" required>
-            <div ng-messages="listingFrom.code.$error" role="alert">
+            <div ng-messages="listingForm.code.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Listing code is required</p>
             </div>
           </div>
