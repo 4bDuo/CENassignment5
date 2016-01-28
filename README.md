@@ -32,6 +32,11 @@ Go to the routes defined in the client-side config folder. You will notice there
 
 View [this tutorial](https://scotch.io/tutorials/angular-routing-using-ui-router) for more information on using Angular UI Router. Also refer to the [wiki](https://github.com/angular-ui/ui-router/wiki) for an in-depth explanation of the router's mechanisms. 
 
+Prerequisites
+
+clone the repository
+in the project directory run npm install and bower install
+
 ### Assignment, Part 1
 Taking a look at the source code, you should notice that the file structure is much more involved than previous assignments. Like assignment 4, before implementing any code you should diagram out how the different parts of the application are communicating with one another. 
 Take note specifically of:
