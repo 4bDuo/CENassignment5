@@ -33,6 +33,8 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
 
       var id = $stateParams.listingId;
 
+      console.log('listingId is: ' + $stateParams.listingId);
+
       Listings.read(id)
               .then(function(response) {
                 $scope.listing = response.data;
@@ -80,6 +82,10 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
         occurs, pass it to $scope.error. 
        */
        $scope.error = null;
+
+       var listingId = $stateParams.listingId;
+
+      console.log('update listingId is: ' + listingId);
 
       /* 
         Check that the form is valid. (https://github.com/paulyoder/angular-bootstrap-show-errors)
