@@ -86,7 +86,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
       /* 
         Check that the form is valid. (https://github.com/paulyoder/angular-bootstrap-show-errors)
        */
-       console.log('latitude is:' + $stateParams.latitude);
+       
       if (isValid) {
         var listingId = $stateParams.listingId;
         console.log('update listingId is: ' + listingId);
@@ -122,9 +122,6 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
     }
      
 
-    
-	
-
     $scope.initializeMarkers = function(){
         $scope.loading = true;
         $scope.listings = [];
@@ -157,12 +154,6 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
       }, 
       zoom: 13
     }
-	
-	// $scope.onClick = function(marker, eventName, model) {
- //            console.log("Marker Clicked!");
- //            model.show = !model.show;
- //        };
-	
 	
   }
 ]);
