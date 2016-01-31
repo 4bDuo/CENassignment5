@@ -35,6 +35,14 @@
             <input name="address" type="text" ng-model="address" id="address" class="form-control" placeholder="{{listing.address}}">
           </div>
           <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input name="latitude" type="text" ng-model="latitude" id="latitude" class="form-control" placeholder="{{listing.latitude}}">
+          </div>
+          <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input name="longitude" type="text" ng-model="longitude" id="longitude" class="form-control" placeholder="{{listing.longitude}}">
+          </div>
+          <div class="form-group">
             <input type="submit" class="btn btn-default">
           </div>
           <div ng-show="error" class="text-danger">
