@@ -86,7 +86,6 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
       /* 
         Check that the form is valid. (https://github.com/paulyoder/angular-bootstrap-show-errors)
        */
-       
       if (isValid) {
         var listingId = $stateParams.listingId;
         console.log('update listingId is: ' + listingId);
