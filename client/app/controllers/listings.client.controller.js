@@ -81,37 +81,24 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
         successfully finished, navigate back to the 'listing.list' state using $state.go(). If an error 
         occurs, pass it to $scope.error. 
        */
-       $scope.error = null;
-
-       var listingId = $stateParams.listingId;
-
-      console.log('update listingId is: ' + listingId);
+      
 
       /* 
         Check that the form is valid. (https://github.com/paulyoder/angular-bootstrap-show-errors)
        */
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'articleForm');
+       console.log('latitude is:' + $stateParams.latitude);
+      if (isValid) {
+        var listingId = $stateParams.listingId;
+        console.log('update listingId is: ' + listingId);
 
-        return false;
+        Listings.update(listingId, $scope.listing).then(function(response){
+          $state.go('listings.list', {successMessage: 'Listing successfully updated!'});
+        }, function(error){
+          $scope.error = "Unable to update listing!\n" + error;
+        });
+        
       }
 
-      /* Create the listing object */
-      var listing = {
-        name: $scope.name, 
-        code: $scope.code,
-        address: $scope.address
-      };
-
-      /* Save the article using the Listings factory */
-      Listings.update(listingId, listing)
-              .then(function(response) {
-                //if the object is successfully saved redirect back to the list page
-                $state.go('listings.list', { successMessage: 'Listing succesfully saved!' });
-              }, function(error) {
-                //otherwise display the error
-                $scope.error = 'Unable to save listing!\n' + error;
-              });
     };
 
     $scope.remove = function(listingId) {
